@@ -56,16 +56,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        View.OnClickListener buttonOrderListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int c = Integer.parseInt( quantityTextView.getText().toString() );
-                c = c * 10;
-                String str = c + "";
-                valore.setText( str );
-            }
-        };
-
         bottone.setOnClickListener( buttonListener );
         order.setOnClickListener( buttonOrderListener );
         meno.setOnClickListener( buttonMenoListener );
