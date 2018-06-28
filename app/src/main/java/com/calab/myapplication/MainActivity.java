@@ -24,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
     Button order;
     MapView map;
     RecyclerView test;
-
-    String stringa;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -34,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView = (TextView) findViewById( R.id.quantity_text_view );
         bottone = (Button) findViewById( R.id.Buttonpiù );
         meno = (Button) findViewById( R.id.buttonmeno );
+        order = (Button) findViewById( R.id.Button );
         valore = (TextView) findViewById( R.id.valore );
 
 
@@ -55,16 +53,6 @@ public class MainActivity extends AppCompatActivity {
                     String str = c + "";
                     quantityTextView.setText( str );
                 }
-            }
-        };
-
-        View.OnClickListener buttonOrderListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int c = Integer.parseInt( quantityTextView.getText().toString() );
-                c = c * 10;
-                String str = c + "";
-                valore.setText( str );
             }
         };
 
